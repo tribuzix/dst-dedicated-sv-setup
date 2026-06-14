@@ -7,10 +7,11 @@ Esse é um guia para criar servidores dedicados de Don't Starve Together em Linu
 Antes de começar a instalação certifique-se que você tem os seguintes pré-requisitos instalados:
 * SteamCMD
 * Algumas Libs:
-No Ubuntu:
+
+    No Ubuntu:
     `sudo apt-get install libstdc++6:i386 libgcc1:i386 libcurl4-gnutls-dev:i386`
 
-No Arch:
+    No Arch:
     `sudo pacman -S libcurl-gnutls`
 
 ### Criação do servidor
@@ -36,6 +37,6 @@ Essa pasta (MyDediServer) é o Cluster do seu servidor, ou seja o coração de s
 
 ### Iniciando o servidor
 Para iniciar o servidor, certifique-se que o arquivo "start-server.sh" tem permissões de executar como um programa, caso tenha basta executar no terminal:
-`~/dst-dedi-sv.sh`
+`~/start-server.sh`
 
 
