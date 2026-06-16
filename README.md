@@ -42,7 +42,7 @@ Copie o arquivo "MyDediServer.zip", cole na pasta ~/.klei/DoNotStarveTogether e 
 
 Isso gerará uma pasta chamada "MyDediServer".
 
-Entre nessa pasta e crie uma pasta chamada "mods" (ela vai ser muito útil futuramente.
+Entre nessa pasta e crie uma pasta chamada "mods" (ela vai ser muito útil futuramente).
 
 ### Entendendo os arquivos
 Essa pasta (MyDediServer) é o Cluster do seu servidor, ou seja o coração de seu mundo, é aqui que estarão os arquivos essenciais do servidor.
@@ -57,6 +57,18 @@ Essa pasta (MyDediServer) é o Cluster do seu servidor, ou seja o coração de s
 
 ### Iniciando o servidor
 Para iniciar o servidor, certifique-se que o arquivo "start-server.sh" tem permissões de executar como um programa.
+
+Abra o arquivo com um editor de texto, e certifique-se que os diretórios estão corretamente selecionados. A estrutura padrão é a seguinte:
+
+```
+    steamcmd_dir="$HOME/steamcmd"
+    install_dir="$HOME/.klei/DoNotStarveTogether/dedi-sv-install"
+    cluster_name="MyDediServer"
+    dontstarve_dir="$HOME/.klei/DoNotStarveTogether"
+    mods_source_dir="$dontstarve_dir/$cluster_name/mods"
+```
+
+Caso o local dos arquivos seja diferente, basta mudar o que está entre áspas ("") e digitar o endereço correto.
 
 Inicie o servidor executando no terminal:
 

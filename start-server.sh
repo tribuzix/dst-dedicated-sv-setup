@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# Directories
 steamcmd_dir="$HOME/steamcmd"
 install_dir="$HOME/.klei/DoNotStarveTogether/dedi-sv-install"
-cluster_name="dedi-sv"
+cluster_name="MyDediServer"
 dontstarve_dir="$HOME/.klei/DoNotStarveTogether"
 mods_source_dir="$dontstarve_dir/$cluster_name/mods"
 
@@ -37,7 +38,7 @@ else
 fi
 
 if [ -f "$mods_source_dir/modoverrides.lua" ]; then
-    cp "$mods_source_dir/modoverrides.lua" "$dontstarve_dir/$cluster_name/Overworld/"
+    cp "$mods_source_dir/modoverrides.lua" "$dontstarve_dir/$cluster_name/Master/"
     cp "$mods_source_dir/modoverrides.lua" "$dontstarve_dir/$cluster_name/Caves/"
     echo "Copied modoverrides.lua to both shards"
 else
@@ -46,7 +47,7 @@ fi
 
 check_for_file "$install_dir/bin64"
 
-cd "$install_dir/bin64" || fail
+cd "$install_dir/bin64" || fail "Missing bin64"
 
 run_shared=(./dontstarve_dedicated_server_nullrenderer_x64)
 run_shared+=(-console)
